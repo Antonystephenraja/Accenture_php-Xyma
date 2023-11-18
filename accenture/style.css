@@ -1,0 +1,135 @@
+
+body {
+  font-family: 'Font Name', Josefin Sans;
+}
+.rounded1{
+  border-radius: 20px;
+}
+.rounded-full {
+  border-radius: 10px;
+}
+.list-group {
+  align-items: center;
+  font-weight: 600;
+}
+.row{
+justify-content: center;
+
+}
+#wrapper{
+  background-color: rgba(215, 215, 227, 0.935);
+}
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+#page-content-wrapper {
+  min-width: 100vw;
+}
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+#menu-toggle {
+  cursor: pointer;
+}
+#menu-min-toggle{
+  position: fixed;
+  top: 90%;
+  left: 80%;
+}
+#sidebar-wrapper .list-group-item {
+  border: none;
+  padding: 10px 30px;
+  color: #2E1A47 !important;
+  background-color: #fff;
+  margin-bottom: 10px;
+  
+}
+#sidebar-wrapper .list-group-item.active {
+  background-color: #2E1A47 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  
+}
+#sidebar-wrapper .list-group-item:hover {
+  background-color: #2E1A47 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.btn {
+  background-color: black;
+}
+.card {
+  border: 6px solid #cccccc;
+  border-radius: 5px;
+}
+
+.sweep-to-right {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+  color: black;
+  text-decoration: none;
+  
+
+}
+.sweep-to-right:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0  ;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2E1A47;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+
+}
+.sweep-to-right:hover {
+  color: white;
+  
+}
+.sweep-to-right:hover:before {
+
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+ /* @media (max-width: 768px) {
+  #menu-toggle{
+    display: none;
+  }
+}  */
